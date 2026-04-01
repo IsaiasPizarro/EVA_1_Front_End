@@ -1,38 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+    <!-- Se genero una mejora de estructura con IA Copilot -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Venta de Bicicletas - BicisPro</title>
-    <link rel="icon" href="IMG/favicon.png">
+    <title>Venta de Bicicletas - BicisProValpo</title>
+    <link rel="icon" href="IMG/Bike-icon.jpg" type="image/jpeg">
     <link href="bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <style>
-      /* Estilos personalizados */
-      :root{
-        --brand:#0d6efd;
-        --accent:#198754;
-        --muted:#6c757d;
-        --bg:#f8f9fa;
-        --max-width:1100px;
-        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      }
-      body{ background:var(--bg); color:#222; }
-      header{ background:#fff; }
-      .hero{ padding:3rem 0; text-align:center; background:linear-gradient(180deg,#fff 0%, #f1f5ff 100%); }
-      .container{ max-width:var(--max-width); }
-      .bike-card img{ height:180px; object-fit:cover; }
-      .specs ul{ padding-left:1rem; }
-      footer{ background:#0b1220; color:#e9ecef; }
-      @media (min-width:768px){ .hero{ padding:4rem 0; } }
-    </style>
+    <link href="estilo.css" rel="stylesheet">
+ 
   </head>
   <body>
     <header role="banner">
       <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
         <div class="container">
           <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="IMG/logo.png" alt="BicisPro logo" width="48" height="48" class="me-2">
-            <span class="fw-bold">BicisPro</span>
+            <img src="IMG/Bike-icon.jpg" alt="BicisPro logo" width="48" height="48" class="me-2">
+            <span class="fw-bold">BicisProValpo</span>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar navegación">
             <span class="navbar-toggler-icon"></span>
@@ -40,7 +24,6 @@
           <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="#destacados">Destacados</a></li>
-              <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
               <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
               <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
@@ -64,7 +47,7 @@
         <div class="row g-4">
           <article class="col-md-6">
             <div class="card bike-card h-100">
-              <img src="IMG/bicicleta1.jpg" class="card-img-top" alt="Bicicleta de montaña Xtreme 300" loading="lazy">
+              <img src="IMG/las-mejores-bicicletas-de-enduro-para-cada-presupuesto.jpg" class="card-img-top" alt="Bicicleta de montaña Xtreme 300" loading="lazy">
               <div class="card-body d-flex flex-column">
                 <h3 class="h5">Xtreme 300</h3>
                 <p class="mb-3">Cuadro de aluminio, suspensión delantera y frenos hidráulicos para rutas exigentes.</p>
@@ -77,7 +60,7 @@
 
           <article class="col-md-6">
             <div class="card bike-card h-100">
-              <img src="IMG/bicicleta2.jpg" class="card-img-top" alt="Bicicleta eléctrica UrbanGo E" loading="lazy">
+              <img src="IMG/300.jpg" class="card-img-top" alt="Bicicleta eléctrica UrbanGo E" loading="lazy">
               <div class="card-body d-flex flex-column">
                 <h3 class="h5">UrbanGo E</h3>
                 <p class="mb-3">Eléctrica urbana con autonomía hasta 80 km y asistencia en el pedaleo.</p>
@@ -87,19 +70,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section id="galeria" class="bg-white py-5" aria-labelledby="galeria-title">
-        <div class="container">
-          <h2 id="galeria-title">Galería</h2>
-          <p class="text-muted">Imágenes reales de productos y detalles.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <img src="IMG/bici_small_1.jpg" alt="Manubrio y pantalla" class="img-fluid rounded" style="width:calc(25% - 8px);">
-            <img src="IMG/bici_small_2.jpg" alt="Bici en sendero" class="img-fluid rounded" style="width:calc(25% - 8px);">
-            <img src="IMG/bici_small_3.jpg" alt="Bici eléctrica estacionada" class="img-fluid rounded" style="width:calc(25% - 8px);">
-            <img src="IMG/bici_small_4.jpg" alt="Bici urbana en ciudad" class="img-fluid rounded" style="width:calc(25% - 8px);">
-          </div>
         </div>
       </section>
 
@@ -125,7 +95,7 @@
             <div class="card h-100 specs">
               <div class="card-body">
                 <h3 class="h6">UrbanGo E</h3>
-                <p class="h5 text-success">$899.990</p>
+                <p class="h5 text-success">$1</p>
                 <ul>
                   <li>Batería 500Wh (hasta 80 km)</li>
                   <li>Asistencia 5 niveles</li>
@@ -201,13 +171,38 @@
       </section>
     </main>
 
-    <footer role="contentinfo" class="py-4 mt-5">
-      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <div>
-          <p class="mb-1">© 2026 BicisPro</p>
-          <p class="mb-0 text-muted">Tel: +56 9 1234 5678 • contacto@bicispro.example</p>
+    <footer role="contentinfo" class="py-5 mt-5" style="background:linear-gradient(180deg,#000,#111); color:#fff;">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <h3 class="h6 text-white">BicisPro</h3>
+            <p class="small">Somos tu tienda de bicicletas de confianza. Calidad, envío rápido y servicio técnico.</p>
+          </div>
+
+          <div class="col-md-4">
+            <h3 class="h6 text-white">Contacto</h3>
+            <p class="mb-1">Tel: <a href="tel:+56913313333" style="color:#fff; text-decoration:none;">+56 9 1331 3333</a></p>
+            <p class="mb-1">Correo: <a href="mailto:contacto@bicisprovalpo.example" style="color:#fff; text-decoration:none;">contacto@bicispro.example</a></p>
+            <p class="mb-0">Dirección: Calle Av.España #123, Ciudad</p>
+          </div>
+
+          <div class="col-md-4">
+            <h3 class="h6 text-white">Enlaces rápidos</h3>
+            <ul class="list-unstyled small mb-0">
+              <li><a href="#destacados" style="color:#9ac4ff; text-decoration:none;">Destacados</a></li>
+              <li><a href="#galeria" style="color:#9ac4ff; text-decoration:none;">Galería</a></li>
+              <li><a href="#precios" style="color:#9ac4ff; text-decoration:none;">Precios</a></li>
+              <li><a href="#contacto" style="color:#9ac4ff; text-decoration:none;">Formulario</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="mt-2 mt-md-0 text-muted small">Dirección: Calle Falsa 123, Ciudad</div>
+
+        <hr style="border-color:#444; margin:1.5rem 0;">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+          <span>© 2026 BicisProValpo. Todos los derechos reservados.</span>
+          <span>Política de privacidad | Términos de servicio</span>
+        </div>
       </div>
     </footer>
 

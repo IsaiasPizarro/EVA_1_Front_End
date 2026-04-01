@@ -1,0 +1,27 @@
+ /* Estilos personalizados */
+      
+ :root{
+        --brand:#007bff; /* Azul */
+        --accent:#000; /* Negro */
+        --muted:#6c757d; /* Gris */
+        --bg:#fff; /* Blanco */
+        --text:#000; /* Negro */
+        --max-width:1100px;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      }
+      body{ background:var(--bg); color:var(--text); }
+      
+      header{ background:var(--accent); } /* Negro */
+      
+      .hero{ padding:3rem 0; text-align:center; background:var(--bg); } /* Blanco */
+      
+      .container{ max-width:var(--max-width); }
+      
+      .bike-card img{ height:180px; object-fit:cover; }
+      
+      .specs ul{ padding-left:1rem; }
+      
+      footer{ background:var(--accent); color:#fff; } /* Negro con texto blanco */
+      
+      @media (min-width:768px){ .hero{ padding:4rem 0; } }
+    
