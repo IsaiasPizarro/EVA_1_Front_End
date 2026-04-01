@@ -1,109 +1,220 @@
-=<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Venta de Bicicletas - BicisPro</title>
+    <link rel="icon" href="IMG/favicon.png">
     <link href="bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="IMG/" rel="icon">
-    <title>Document</title>
-</head>
-<body>
-         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Navegación principal">
+    <style>
+      /* Estilos personalizados */
+      :root{
+        --brand:#0d6efd;
+        --accent:#198754;
+        --muted:#6c757d;
+        --bg:#f8f9fa;
+        --max-width:1100px;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      }
+      body{ background:var(--bg); color:#222; }
+      header{ background:#fff; }
+      .hero{ padding:3rem 0; text-align:center; background:linear-gradient(180deg,#fff 0%, #f1f5ff 100%); }
+      .container{ max-width:var(--max-width); }
+      .bike-card img{ height:180px; object-fit:cover; }
+      .specs ul{ padding-left:1rem; }
+      footer{ background:#0b1220; color:#e9ecef; }
+      @media (min-width:768px){ .hero{ padding:4rem 0; } }
+    </style>
+  </head>
+  <body>
+    <header role="banner">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
         <div class="container">
-          <a class="navbar-brand fw-bold" href="#">okaaa</a>
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="IMG/logo.png" alt="BicisPro logo" width="48" height="48" class="me-2">
+            <span class="fw-bold">BicisPro</span>
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar navegación">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">Nosotros</a></li>
-              <li class="nav-item">Inicio</a></li>
-              <li class="nav-item">Servicios</a></li>
-              <li class="nav-item">Contacto</a></li>
-              <li class="nav-item d-flex align-items-center ms-lg-3 mt-2 mt-lg-0">
-                <a class="btn btn-success btn-sm" href="" target="_blank" rel="noopener" style="background-color:#25d366; border-color:#25d366;">
-                  WHATSAPP
-                </a>
-              </li>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#destacados">Destacados</a></li>
+              <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+              <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
           </div>
         </div>
       </nav>
+    </header>
 
- <section id="nosotros" class="container mb-5">
-        <div class="row align-items-center">
-          <div class="col-lg-6 fade-in">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos la agencia líder</p>
-            <p>espertos en k</p>
-          </div>
-          <div class="col-lg-6 fade-in">
-            <!-- Imagen con alt descriptivo (accesibilidad) -->
-            <img src="" alt="tex2" class="img-fluid rounded" loading="lazy">
+    <main>
+      <section id="inicio" class="hero" aria-labelledby="inicio-title">
+        <div class="container">
+          <h1 id="inicio-title" class="display-6">Encuentra la bicicleta perfecta para tu próxima aventura</h1>
+          <p class="lead text-muted">Modelos para ciudad, montaña y eléctricos con garantía y servicio técnico.</p>
+        </div>
+      </section>
+
+      <section id="destacados" class="container my-5" aria-labelledby="destacados-title">
+        <h2 id="destacados-title">Bicicletas destacadas</h2>
+        <p class="text-muted">Selección recomendada por nuestros expertos.</p>
+
+        <div class="row g-4">
+          <article class="col-md-6">
+            <div class="card bike-card h-100">
+              <img src="IMG/bicicleta1.jpg" class="card-img-top" alt="Bicicleta de montaña Xtreme 300" loading="lazy">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Xtreme 300</h3>
+                <p class="mb-3">Cuadro de aluminio, suspensión delantera y frenos hidráulicos para rutas exigentes.</p>
+                <div class="mt-auto">
+                  <a href="#precios" class="btn btn-primary">Ver especificaciones</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-6">
+            <div class="card bike-card h-100">
+              <img src="IMG/bicicleta2.jpg" class="card-img-top" alt="Bicicleta eléctrica UrbanGo E" loading="lazy">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">UrbanGo E</h3>
+                <p class="mb-3">Eléctrica urbana con autonomía hasta 80 km y asistencia en el pedaleo.</p>
+                <div class="mt-auto">
+                  <a href="#precios" class="btn btn-primary">Ver especificaciones</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="galeria" class="bg-white py-5" aria-labelledby="galeria-title">
+        <div class="container">
+          <h2 id="galeria-title">Galería</h2>
+          <p class="text-muted">Imágenes reales de productos y detalles.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <img src="IMG/bici_small_1.jpg" alt="Manubrio y pantalla" class="img-fluid rounded" style="width:calc(25% - 8px);">
+            <img src="IMG/bici_small_2.jpg" alt="Bici en sendero" class="img-fluid rounded" style="width:calc(25% - 8px);">
+            <img src="IMG/bici_small_3.jpg" alt="Bici eléctrica estacionada" class="img-fluid rounded" style="width:calc(25% - 8px);">
+            <img src="IMG/bici_small_4.jpg" alt="Bici urbana en ciudad" class="img-fluid rounded" style="width:calc(25% - 8px);">
           </div>
         </div>
       </section>
 
-     <section id="servicios" class="py-5">
-        <div class="container">
-          <div class="text-center mb-4 fade-in">
-            <h2>text1</h2>
-            <p class="text-muted"></p>
+      <section id="precios" class="container my-5" aria-labelledby="precios-title">
+        <h2 id="precios-title">Especificaciones y precios</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 specs">
+              <div class="card-body">
+                <h3 class="h6">Xtreme 300</h3>
+                <p class="h5 text-success">$499.990</p>
+                <ul>
+                  <li>Cuadro: Aluminio 6061</li>
+                  <li>Suspensión: Delantera</li>
+                  <li>Frenos: Hidráulicos</li>
+                </ul>
+                <a href="#contacto" class="btn btn-outline-primary">Reservar</a>
+              </div>
+            </div>
           </div>
-          <div class="row g-4">
 
-     <section id="servicios" class="py-5">
-        <div class="container">
-          <div class="text-center mb-4 fade-in">
-            <h2>tex1</h2>
-            <p class="text-muted">tex2</p>
+          <div class="col-md-4">
+            <div class="card h-100 specs">
+              <div class="card-body">
+                <h3 class="h6">UrbanGo E</h3>
+                <p class="h5 text-success">$899.990</p>
+                <ul>
+                  <li>Batería 500Wh (hasta 80 km)</li>
+                  <li>Asistencia 5 niveles</li>
+                  <li>Peso 22 kg</li>
+                </ul>
+                <a href="#contacto" class="btn btn-outline-primary">Reservar</a>
+              </div>
+            </div>
           </div>
-          <div class="row g-4">
 
-    <section id="servicios" class="py-5">
-        <div class="container">
-          <div class="text-center mb-4 fade-in">
-            <h2>tex1</h2>
-            <p class="text-muted">tex2</p>
-          </div>
-          <div class="row g-4">
-    
-        <section id="contacto" class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2>Contacto</h2>
-            <p>Déjanos tus datos y vamos a diseñar el viaje perfecto para vos.</p>
-            <form class="needs-validation" novalidate>
-              <div class="mb-3">
-                <!-- Label asociado al input (accesibilidad) -->
-                <label for="nombre" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+          <div class="col-md-4">
+            <div class="card h-100 specs">
+              <div class="card-body">
+                <h3 class="h6">City Lite</h3>
+                <p class="h5 text-success">$299.990</p>
+                <ul>
+                  <li>Ligera y plegable</li>
+                  <li>Ideal para desplazamientos urbanos</li>
+                  <li>Accesorios incluidos</li>
+                </ul>
+                <a href="#contacto" class="btn btn-outline-primary">Reservar</a>
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
-                <div class="invalid-feedback">Ingresa un email válido.</div>
-              </div>
-              <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos de tu proyecto" required></textarea>
-                <div class="invalid-feedback">El mensaje es obligatorio.</div>
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
+            </div>
           </div>
         </div>
       </section>
 
-       <!-- Pie de página (footer) -->
-    <footer class="bg-dark text-light py-4">
-      <div class="container text-center small">
-        <p class="mb-1">© 2026 inacap - Desarrollado por Isaias Pizarro.</p>
-        <p class="mb-0">Teléfono: +56 9 1234 5678 | WhatsApp: +56 9 8765 4321 | Email: inacapinfo@inacap.cl</p>
+      <section id="contacto" class="container py-5" aria-labelledby="contacto-title">
+        <h2 id="contacto-title">Contacto y formulario</h2>
+        <p class="text-muted">Completa este formulario para solicitar información o realizar una reserva.</p>
+
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required>
+            <div class="invalid-feedback">Ingresa tu nombre.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+            <div class="invalid-feedback">Ingresa un correo válido.</div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="form-control">
+          </div>
+
+          <div class="col-md-4">
+            <label for="modelo" class="form-label">Modelo</label>
+            <select id="modelo" name="modelo" class="form-select">
+              <option>Xtreme 300</option>
+              <option>UrbanGo E</option>
+              <option>City Lite</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input type="number" id="cantidad" name="cantidad" class="form-control" min="1" value="1">
+          </div>
+
+          <div class="col-12">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" class="form-control" rows="4"></textarea>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-success">Enviar solicitud</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer role="contentinfo" class="py-4 mt-5">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>
+          <p class="mb-1">© 2026 BicisPro</p>
+          <p class="mb-0 text-muted">Tel: +56 9 1234 5678 • contacto@bicispro.example</p>
+        </div>
+        <div class="mt-2 mt-md-0 text-muted small">Dirección: Calle Falsa 123, Ciudad</div>
       </div>
     </footer>
- <script href="bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-</body>
+
+    <script src="bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+      // Validación de formulario usando Bootstrap
+      (function(){'use strict';var forms=document.querySelectorAll('.needs-validation');Array.prototype.slice.call(forms).forEach(function(form){form.addEventListener('submit',function(e){if(!form.checkValidity()){e.preventDefault();e.stopPropagation();}form.classList.add('was-validated');},false);});})();
+    </script>
+  </body>
 </html>
